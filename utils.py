@@ -15,7 +15,7 @@ def deploy_contract(web3, contract_interface):
     Deploys a contract to the blockchain.
     '''
 
-    web3 = Web3(IPCProvider(config.IPC_ENDPOINT))
+    web3 = Web3(IPCProvider(config.ipc_endpoint()))
 
     # Instantiate contract
     contract = web3.eth.contract(

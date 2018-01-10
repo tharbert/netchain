@@ -3,9 +3,9 @@ import typing
 
 
 CONTRACT_ADDR = ''
-CONTRACT_SOURCE = 'etc/OrgData.sol'
-IPC_ENDPOINT = 'data/geth.ipc'
-LOGFILE = 'netchain.log'
+CONTRACT_SOURCE = '/etc/OrgData.sol'
+IPC_ENDPOINT = '/data/geth.ipc'
+LOGFILE = '/netchain.log'
 VERSION = '0.01-POC'
 WORKING_DIR = ''
 
