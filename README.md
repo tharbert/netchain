@@ -39,7 +39,7 @@ brew tap ethereum/ethereum
 brew install ethereum
 ```
 
-Add two temporary loopback addresses for the peering between router1 and router2 are required:
+Add two temporary loopback addresses for the peering between router1 and router2:
 ```
 sudo ifconfig lo0 alias 10.0.0.1/32
 sudo ifconfig lo0 alias 10.0.0.2/32
