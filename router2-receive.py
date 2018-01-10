@@ -7,14 +7,12 @@ import typing
 import config
 import utils
 
-import utils
-
 from solc import compile_source
 from web3.contract import ConciseContract
 from web3 import Web3, IPCProvider
 
 
-def query_blockchain(data: str):
+def query_blockchain(data: str) -> None:
     '''
     TODO(tom): doco
     '''
@@ -26,19 +24,7 @@ def query_blockchain(data: str):
         f'Querying blockchain for prefix {prefix} received from peer {neighbor}'
     utils.write_log(log_message)
 
-    web3 = Web3(IPCProvider(config.IPC_ENDPOINT))
-
-    contract_source = utils.get_contract_source(f'{config.WORKING_DIR}OrgData.sol')
-
-    compiled_sol = compile_source(contract_source)
-    contract_interface = compiled_sol['<stdin>:OrgData']
-
-    # Contract instance in concise mode
-    contract_instance = web3.eth.contract(
-        contract_interface['abi'],
-        config.CONTRACT_ADDR,
-        ContractFactoryClass=ConciseContract)
-
+    contract_instance = utils.get_contract_instance()
     prefixes = contract_instance.get()
 
     if prefix in prefixes:
