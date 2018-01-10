@@ -20,9 +20,13 @@ Clone the repo:
 git clone git://github.com/tharbert/netchain
 ```
 
-Update the configuration WORKING_DIR:
+All the following steps should be run from inside the repo directory:
 ```
 cd netchain
+```
+
+Update the configuration WORKING_DIR:
+```
 pwd
 vim config.py
 ```
@@ -32,10 +36,12 @@ Install python modules:
 pip3 install web3 py-solc exabgp
 ```
 
-Install ethereum (for geth etc.) via homebrew:
+Install ethereum (for geth, solidity etc.) via homebrew:
 ```
 brew update
+brew upgrade
 brew tap ethereum/ethereum
+brew install solidity
 brew install ethereum
 ```
 
