@@ -17,7 +17,7 @@ Requirements:
 
 Clone the repo:
 ```
-git clone github.com/tharbert/netchain
+git clone git://github.com/tharbert/netchain
 ```
 
 Update the configuration WORKING_DIR:
